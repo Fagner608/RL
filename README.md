@@ -31,3 +31,18 @@ o grau de intervação (para o grau, consultar tabela)
 
 Coef de determinação: como resultado do cálculo (cor^2) você terá a explicabilidade de uma variável sobre a outra, ou seja, o quanto a variável x, consegue explicar a variabilidade da variável y. este resultado é o mesmo que se obtem como resultado de uma RL simples.
 
+##### 
+Regressão linear é um algoritmo para calcular previsões, baseada na relação matemática entre 2 variáveis.
+y = b0 + b1*x + e
+Y = variável alvo (ou predita)
+b0 = constante ou intercepto
+b1 =coeficiente de angulação
+x = variável explicativa ou preditora
+e = ressíduo
+
+Para encontrar o melhor ponto da reta, o algoritmo irá utilizar o MMQ (método de mínimos quadrados):
+explicando: valor real - valor previsto = (erro)2 - elevando ao quadrado ele poderá identificar melhor os erros maiores, além de descartar números ímpares, oq eu difiultaria o trabalho.
+Após calcular o erro, ele somarará os resultados. O trabalho do algoritmo é treinar, e calcular todas as combinações possíveis, escolhendo a reta que tenha como resultado o menor valor no "e", que será, o ponto da reta que melhor vai prever o valor de y. para isso ele utilizar o método de descida do gradiente.
+Como resultado, entregará o valor dos coeficientes utilizados (b0 e b1)
+A linearidade, não vem da equação da reta, mas do método de cálculo do resíduo.
+
