@@ -76,7 +76,52 @@ não é linear.
        O EQT (erro quadratico total) pode ser dado por: EQT = somatório e^2 ou somatório de [yi - f(0)]^2.
        Neste cálculo yi está representando o valor observado, e f(o) está rerpresentando a função de regressão
        
+       Propriedade dos estimadores: - valor médio dos resíduos deve ser = 0
+                                    - Os resíduos não deve ter correlação com x
+                                    - a reta passa pela média aritmetica de x e y
        
+       Estas suposições podem ser analisadas graficamente e numericamente com funções do R, após o cálculo da análise.
+        - Inferência como os estimadores
+            Após obter os coeficientes, deve-se verificar a confiabilidade dos resultados, ou seja, saber se eles correspondem aos parâmetros da população.
+            PAra isso, usam-se os testes de hipótese e intervalos de confiança, viabilizados pelo teorema de Gauss-Markov
+            
+                Teorema: 
+                Explicação: as amostras variam, e os coeficientes obtidos a partir da reta da amostra 1, pode não ser o obtido a partir da amostra 2; ainda,
+                pode ser que, dependendo da amostra, outro técnica, não o MQO, seja a mlehor forma de obter o melhor coeficiente. Então, o que garante que
+                o resultado obtido pelo MQO será o melhor que você terá?.
+                
+                pressupostos:
+         # GARANTEM A AUSÊNCIA DE VIÉS.
+        1° - relação linear entre x e y. 
+        2° valores de x são fixos. as vezes não se tem o controle, como em casos de estudoes ecnômicos.
+        3° esperença condicional de e=0: os erros não devem ter correlação com x. Espera-se que os coeficientes empre possam dar o valor de y, aplicando
+        os coeficientes com esperança de e=0. Portanto E(ei|xi == 0 E(Yi) = a +bxi. Se, na análise deste pressuposto, você verificar que os erros se distribuem
+        afastados da média 0, seus coeficientes pode estar enviesados (as vezes, inclusive por uma variável ausênte).
+        
+        # GARANTEM A EFICIÊNCIA DO MODELO
+        4° variabilidade do e, ou seja, deve haver heterocedasticidade.
+        5° erros não correlacionados: não deve haver relação entre os erros. Em estudos de autocorrelação em séries temporais, por exemplo, a autocorrelação
+        é frequente.
   
+  Em complementaçõ deve-se avaliar a normalidade da distribuição dos erros, para que se seja possível a aplicação dos testes de hipótese aos coeficientes.
+ 
+ ## SIGNIFICÂNCIA DAS ESTIMATIVAS
+    Distribuição amostral e variância dos estimadores:
+    
+    
+    - Teste de hipósete dos estimadores: Cálculo da probabilidade de erro dos estimadores (tendo em vista o erro padrão existente, em relação ao parâmetros da população).
 
+Coefficients:
+                                     Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                           0.05397    1.65448   0.033    0.974    
+BVSP_amplitude_returns$lag_amplitude -0.49563    0.03592 -13.799   <2e-16 ***
+
+COmo exemplo, na regressão que fiz para analisar a amplitude do candle.
+O valor P associado ao interceto é de 0.974, portanto, a probabilidade de erro ao afirmar que o valor do intercepto seja diferente de 0, é de 0.97%.
+Portanto, ao afirmar que o dia terá uma amplitude, independentemtente do tamnho do candle anterior, a chance de estar errado é de 0.97%, já que esta sendo motivadas por outros fatores.
+Analogamente, ao se afirmar que o valor B é diferente de 0, a chance de estar erraco é quase nula. O valor associado ao B é um número mto próximo a zero, ou seja, se afirmarmos que o tamanho do candle atual tem relação com o tamanho do candle de ontem, a chance de estarmos errado é praticamente nula.
+
+Portanto, o P.test, ou seja a probabilidade de os números obtidos nos estimadores estarem errados tem que ser sempre < 0.05.
+
+Intervalo de confiança para coeficientes p. 35
 
