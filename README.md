@@ -70,17 +70,17 @@ não é linear.
       quanto produzirei?
       
       #MMQ Ordinários
-       Seja um con junto de informaçãoes (yi) dado como resultado de uma função matematia (f(0)), o MMQO utilizada uma série de princípios matemáticos que,
+       Seja um conjunto de informaçãoes (yi) dado como resultado de uma função matematia (f(0)), o MMQO utilizada uma série de princípios matemáticos que,
        ao realizar o cálculos do erro de previsão (e = yi-y), o elevará o quadrado, após realizando o somatório. A forma que apresentar o menor erro, será
        a que melhor descreve a relação quantitativa entre as variáveis x e y, resultando no modelo ajustado.
        O EQT (erro quadratico total) pode ser dado por: EQT = somatório e^2 ou somatório de [yi - f(0)]^2.
        Neste cálculo yi está representando o valor observado, e f(o) está rerpresentando a função de regressão
        
        Propriedade dos estimadores: - valor médio dos resíduos deve ser = 0
-                                    - Os resíduos não deve ter correlação com x
+                                    - Os resíduos não devem ter correlação com x
                                     - a reta passa pela média aritmetica de x e y
        
-       Estas suposições podem ser analisadas graficamente e numericamente com funções do R, após o cálculo da análise.
+       Estas suposições podem ser analisadas graficamente e numericamente com funções do R, após o cálculo da regressao.
         - Inferência como os estimadores
             Após obter os coeficientes, deve-se verificar a confiabilidade dos resultados, ou seja, saber se eles correspondem aos parâmetros da população.
             PAra isso, usam-se os testes de hipótese e intervalos de confiança, viabilizados pelo teorema de Gauss-Markov
@@ -117,11 +117,15 @@ Coefficients:
 BVSP_amplitude_returns$lag_amplitude -0.49563    0.03592 -13.799   <2e-16 ***
 
 COmo exemplo, na regressão que fiz para analisar a amplitude do candle.
-O valor P associado ao interceto é de 0.974, portanto, a probabilidade de erro ao afirmar que o valor do intercepto seja diferente de 0, é de 0.97%.
+O valor P associado ao interceto é de 0.974, portanto, a probabilidade de erro ao afirmar que o valor do intercepto seja diferente de 0, é de .
 Portanto, ao afirmar que o dia terá uma amplitude, independentemtente do tamnho do candle anterior, a chance de estar errado é de 0.97%, já que esta sendo motivadas por outros fatores.
 Analogamente, ao se afirmar que o valor B é diferente de 0, a chance de estar erraco é quase nula. O valor associado ao B é um número mto próximo a zero, ou seja, se afirmarmos que o tamanho do candle atual tem relação com o tamanho do candle de ontem, a chance de estarmos errado é praticamente nula.
 
 Portanto, o P.test, ou seja a probabilidade de os números obtidos nos estimadores estarem errados tem que ser sempre < 0.05.
 
 Intervalo de confiança para coeficientes p. 35
+Intervalos de previsão para valores de Y.
+    tendo em vista que as estimativas de "a" e "B" variam, isto interfere nos valores previstos, vez que este último é obtido em função dos estimadores.
+Portanto, é necessário considerar esta variabilidade na hora e prever Y. Há, contudo, um alerta, uma distinção entre intervalos de previsão para média, e 
+intervalos de previsão para valores individuais.
 
