@@ -128,4 +128,16 @@ Intervalos de previsão para valores de Y.
     tendo em vista que as estimativas de "a" e "B" variam, isto interfere nos valores previstos, vez que este último é obtido em função dos estimadores.
 Portanto, é necessário considerar esta variabilidade na hora e prever Y. Há, contudo, um alerta, uma distinção entre intervalos de previsão para média, e 
 intervalos de previsão para valores individuais.
+    IC (intervalos de confiança) são utilizados para se ralizar inferência de médias amostrarais. enquanto que, IP (intervalos de previsão) são utilizados para
+    fazer a iferência de valores individuais. Pela própríoa naturea (por representar valores do conjunto todo), os IC tendem a ser menores do que os IP.
+    - Imagine que os redimentos de uma população (Y) estejam normalmente distribuidos com méidia (Uy) 800,00 e Var de 200^2 (Var = (somatório dos desvios/n)^2)
+            Y ~ N(800,200^2) = esta é a função de probabilidade de Y. Com ela você consegue estimar a probabiliade de qualquer valor da população.
+            O intervalo de =~ 400-1000, conteria os valores da remuneração da população em 95% da vezes.
+            
+            Imagine, agora, que dessa população.... p 48
+            
+    
+
+
+
 
