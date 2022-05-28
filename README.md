@@ -160,7 +160,7 @@ intervalos de previsão para valores individuais.
                     II - valor previsto de Y pela reta;
                     III - valor da méria de Y
                    Pode-se: I - medir o SQT, II - o SQreg e III - o SQres. Após é s[o calcular a propoprção do SQRes em relação ao SQT, quanto maior for a proporção do SQred, em relação do SQres, maior será a explicabilidade de X em relação a Y. Por ser uma medidade linear, será dada em escala de 0-1 (porporção), que *100, dará o percentual.
-    
+    p.73
 
 
 
