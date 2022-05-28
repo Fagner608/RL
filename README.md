@@ -134,8 +134,32 @@ intervalos de previsão para valores individuais.
             Y ~ N(800,200^2) = esta é a função de probabilidade de Y. Com ela você consegue estimar a probabiliade de qualquer valor da população.
             O intervalo de =~ 400-1000, conteria os valores da remuneração da população em 95% da vezes.
             
-            Imagine, agora, que dessa população.... p 48
+            Imagine, agora, que dessa população, você selecione uma amostra n=100, com média de remuneração 800 e var200^2/100, utilizando-se a mesma função (Y ~N(800, 200^2/100),teriamos 95% de probabilidade que o rendimento medio de uma pessoa, etaria neste intervalo.
+            Para determinar o IC (ou IP - substituindo a contatante var^2 por Var^/sqrt(n)) = IC(prob, Y) = [^y - ZyVarY; ^y + ZyVarY]
             
+            # IC para valores de Yi
+            # IP para valores de Yi
+            
+            ## PROPRIEDADE DAS ESTIMATIVAS POR INTERVALO
+            
+                I - quanto maior a dispersão dos resíduos, maior serão os IC/IP para yi. A medida que aumenta a Var^2 dos resíduos, aumenta a Var^2 de yi, e consequentemente, aumetará a amplitude dos intervalos;
+                II - quanto maior a amostra, maior será a precisão das previsões. O tamando de n, é usando como denominador para as estaísticas de teste.
+                III - quanto maior é a variabilidade de x (regressor), maior será a precisão/confiança em yi;
+                IV - quanto mais o valor de x aproxima-se de sua média, maior é a precisão dos intervalos. Visto que valores muito afastados da média aumentaram a amplitude do IC.
+                
+                
+                #### ANÁLISE DE VARIÂNCIA E ANOVA
+                O comportamento de um resultado, pode ser dividido em 2 partes: 1 - devido a fotores controlados, II - devido a fotores não controlados.
+                Com base neste conceito, a análise de variância visa determinar, o quanto do comportamento de Y pode ser explicado por X, em uma RLS.
+                    #soma dos quadrados: Para determinar o quando o modelo pode explicar o coportamento de Y, calula-se a coma dos desvios da reta em relação a sua média (SQReg - soma dos quadrados da regressão).
+                    Para quantificar os resíduos, calcula-se a soma dos valores previstos - média. (SQRes - soma dos quadrados do resíduo)
+                    Assim, tem-se, tanto o comportamento explicado, quando o não exmplicado, o somatório de ambos dará o SQT soma quadrática total.
+                    
+                    # Coef de determinação: com as 3 mesdidas:
+                    I - Valor de Y;
+                    II - valor previsto de Y pela reta;
+                    III - valor da méria de Y
+                   Pode-se: I - medir o SQT, II - o SQreg e III - o SQres. Após é s[o calcular a propoprção do SQRes em relação ao SQT, quanto maior for a proporção do SQred, em relação do SQres, maior será a explicabilidade de X em relação a Y. Por ser uma medidade linear, será dada em escala de 0-1 (porporção), que *100, dará o percentual.
     
 
 
